@@ -13,7 +13,7 @@
       </div>
       <slot v-if="this.$slots.extra" slot="extra" name="extra"></slot>
     </page-header>
-    <div ref="page" :class="['page-content','beauty-scroll', layout, pageWidth]" >
+    <div ref="page" :class="['page-content', layout, pageWidth]" class="beauty-scroll">
       <slot></slot>
     </div>
   </div>
@@ -115,7 +115,7 @@ export default {
 
 <style lang="less">
   .page-header{
-    margin: 0 -24px 0;
+    // margin: 0 -24px 0;
   }
   .link{
     /*margin-top: 16px;*/
@@ -130,8 +130,10 @@ export default {
     }
   }
   .page-content{
+    height: 86vh;
     position: relative;
-    padding: 24px 0 0;
+    padding: 15px 0 0;
+    overflow-y: auto;
     &.side{
     }
     &.head.fixed{

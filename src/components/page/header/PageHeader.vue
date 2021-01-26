@@ -41,6 +41,11 @@ export default {
       required: false
     },
   },
+  methods:{
+    handleChange(e){
+      console.log(e)
+    }
+  },
   computed: {
     ...mapState('setting', ['layout', 'showPageTitle', 'pageWidth'])
   }

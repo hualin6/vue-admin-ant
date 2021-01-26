@@ -57,7 +57,7 @@
           <setting />
         </drawer>
       </div>
-      <a-layout class="admin-layout-main beauty-scroll">
+      <a-layout class="admin-layout-main">
         <a-layout-content
           class="admin-layout-content"
           :style="`min-height: ${minHeight}px;`"
@@ -185,7 +185,6 @@ export default {
 }
 .admin-layout {
   .slide {
-    width: 256px;
     left: 0;
   }
   .side-menu {
@@ -218,7 +217,7 @@ export default {
     }
   }
   .admin-layout-content {
-    padding: 24px 24px 0;
+    padding: 24px 10px 0;
     /*overflow-x: hidden;*/
     /*min-height: calc(100vh - 64px - 122px);*/
   }
