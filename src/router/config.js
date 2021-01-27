@@ -26,6 +26,23 @@ const options = {
       component: TabsView,
       redirect: '/login',
       children: [
+        // 桥梁档案
+        {
+          path: '/bridgefiles',
+          name: 'bridgefiles',
+          component: PageView,
+          redirect: '/bridgefiles/bridge-list',
+          meta: { title: '桥梁档案', icon: 'book', permission: [ 'table' ] },
+          children: [
+            {
+              path: '/bridgefiles/bridge-list',
+              name: 'BridgeList',
+              hideChildrenInMenu: true, // 强制显示 MenuItem 而不是 SubMenu
+              component: () => import('@/pages/bridgefiles/BridgeList'),
+              meta: { title: '桥梁列表', keepAlive: true, permission: [ 'table' ] }
+            }
+          ]
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',
